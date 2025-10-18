@@ -1,0 +1,19 @@
+.hero {
+  padding: 40px 20px 30px;
+  @include media($mobile) { padding: 32px 10px 20px; }
+  &__title {
+    font-size: px-to-vw(73);
+    @include media($mobile) { font-size: 40px; }
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--helvetica);
+    color: var(--gray);
+    gap: 20px;
+    margin-top: 20px;
+    p { max-width: 900px; }
+    @include media($tablet) { flex-wrap: wrap; }
+    @include media($mobile) { --button-max-width: 100%; }
+  }
+}

@@ -1,0 +1,41 @@
+.modal.modal-post(data-modal-target="post")
+  .modal-post__wrapper
+    .modal-post__header 
+      .modal-post__title Новый пост
+      .modal__close(data-modal-close)
+        +icon('close','modal__close-icon')
+    .modal-post__main
+      form(action="/" class="modal-post__form")
+        .modal-post__field
+          input(type="text" autocomplete="off" name="name" placeholder="Anon")
+          input(type="text" name="title" placeholder="Заголовок поста")
+          textarea(name="message" placeholder="Сообщение")
+        .modal-post__inner
+          .modal-post__col
+            .modal-post__headline Загрузить файл
+          .modal-post__col
+            .modal-post__file
+              input(type="file" name="file" id="file" multiple accept="image/*")
+              label(for="file")
+                span.modal-post__button.modal-post__upload Выберите файлы
+              .modal-post__elements 
+                .modal-post__picture
+                .modal-post__checkbox 
+                  .checkbox 
+                    input(type="checkbox" class="checkbox__input" name="spoiler" id="spoiler")
+                    label(for="spoiler" class="checkbox__label")
+                      span.checkbox__check
+                        +icon('checkbox','checkbox__icon')
+                      span Spoiler
+                  .checkbox 
+                    input(type="checkbox" class="checkbox__input" name="strip" id="strip")
+                    label(for="strip" class="checkbox__label")
+                      span.checkbox__check
+                        +icon('checkbox','checkbox__icon')
+                      span Strip Filename
+        .modal-post__inner
+          .modal-post__col
+            .modal-post__headline Tegaki
+          .modal-post__col
+            .modal-post__button.modal-post__draw Нарисовать
+        button(type="submit").Button.Button_Orange Отправить

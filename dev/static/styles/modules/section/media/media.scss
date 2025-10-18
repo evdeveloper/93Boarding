@@ -1,0 +1,47 @@
+.s-media {
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.media {
+  $this: &;
+
+  padding: 80px 20px 20px;
+  @include media($mobile) { padding: 60px 10px 20px; }
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px 20px;
+    @include media($mobile) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    @include media($small) { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+  }
+  &__item {
+    position: relative;
+    &.span-2 { 
+      grid-column: span 2;
+      @include media($mobile) { grid-column: span 1; }
+    }
+    img { 
+      @include size(100%);
+      display: block;
+      object-fit: cover;
+    }
+    &:hover {
+      #{$this}__play { transform: translate(-50%, -50%) scale(1.2); }
+    }
+    @include media($small) { height: 240px; }
+  }
+  &__play {
+    @include size(47px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform var(--duration);
+    z-index: 1;
+    fill: var(--white-stable);
+    @include media($mobile) { @include size(36px); }
+  }
+}

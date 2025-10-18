@@ -2,7 +2,6 @@ let plumber = require('gulp-plumber'),
 scss = require('gulp-sass'),
 autoprefixer = require('gulp-autoprefixer'),
 csso = require('gulp-csso'),
-csscomb = require('gulp-csscomb'),
 sourcemaps = require('gulp-sourcemaps'),
 rename = require('gulp-rename'),
 stylesPATH = {
@@ -24,22 +23,14 @@ module.exports = function () {
       .pipe($.gulp.dest(stylesPATH.output))
       .on('end', $.browserSync.reload);
   });
+  
   $.gulp.task('styles:build', () => {
     return $.gulp.src(stylesPATH.input + 'styles.scss')
+      .pipe(plumber())
       .pipe(scss())
       .pipe(autoprefixer({
         overrideBrowserslist: ['last 3 version']
       }))
-      .pipe(csscomb())
-      .pipe($.gulp.dest(stylesPATH.output))
-  });
-  $.gulp.task('styles:build-min', () => {
-    return $.gulp.src(stylesPATH.input + 'styles.scss')
-      .pipe(scss())
-      .pipe(autoprefixer({
-        overrideBrowserslist: ['last 3 version']
-      }))
-      .pipe(csscomb())
       .pipe(csso())
       .pipe(rename('styles.min.css'))
       .pipe($.gulp.dest(stylesPATH.output))

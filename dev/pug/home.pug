@@ -1,0 +1,17 @@
+extends template/main
+
+block variables
+  - var title = 'Главная страница'
+  - var pageClass = 'home-page'
+  - var HeaderBody = true
+  - var HeaderPicture = true
+  - var Footer = true
+
+
+
+block content
+  include modules/section/news
+  include modules/section/category
+  include modules/section/media
+
+

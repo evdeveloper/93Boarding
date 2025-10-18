@@ -1,0 +1,210 @@
+extends template/main
+
+block variables
+  - var title = 'Борд'
+  - var pageClass = 'board-page'
+  - var HeaderBody = false
+  - var HeaderPicture = false
+  - var Footer = true
+
+
+
+block content
+  section.s-hero
+    .container
+      .hero
+        h1.hero__title /sp/ — /спорт/
+        .hero__inner 
+          p Обсуждение видов спорта и соревнований. Навязчивый форс любых спортсменов или спортсменок, перерастающий в фагготрию с целью розжига срача, в тредах будет удаляться, а фажики баниться.
+          a(href="#" data-modal-open="post").Button.Button_Orange Начать новый ТРЕД 
+  .category.category__posts
+    .container
+      .category__inner
+        .category__col
+          .posts
+            .posts__list
+              .post
+                .post__header
+                  .post__title ЖФК-женский футбольчик
+                  .post__controls
+                    .controls
+                      .controls__item.controls__icon
+                        +icon('hide','controls__svg')
+                      .controls__item.controls__icon
+                        +icon('cancel','controls__svg')
+                      .controls__item.controls__text Ответить
+                    .controls
+                      .controls__item.controls__icon
+                        +icon('lock','controls__svg')
+                      .controls__item.controls__icon
+                        +icon('clip','controls__svg')
+                .post__data
+                  .post__author Anonymous
+                  .post__date 09/01/25(Mon)14:50:32
+                  .post__id #00012345
+                .post__pictures
+                  .post__picture
+                    img(src="static/images/img/sports/1.jpg" alt="Картинки")
+                  .post__picture
+                    img(src="static/images/img/sports/2.jpg" alt="Картинки")
+                  .post__picture
+                    img(src="static/images/img/sports/3.jpg" alt="Картинки")
+                .controls
+                  .controls__item.controls__text.dark Ответить
+                .comment
+                  .comment__item
+                    .post__data
+                      .post__author Anonymous
+                      .post__date 09/01/25(Mon)14:50:32
+                      .post__id #00012345
+                      .controls
+                        .controls__item.controls__text.gray Ответить
+                    .comment__id >> #00012345
+                    .comment__answer Знаю Ирину Григорьеву, Елену Данилову, Елену Морозову, Эльвиру Тодуа
+                  .comment__item
+                    .post__data
+                      .post__author Anonymous
+                      .post__date 09/01/25(Mon)14:50:32
+                      .post__id #00012345
+                      .controls
+                        .controls__item.controls__text.gray Ответить
+                    .comment__id >> #00012345
+                    .comment__answer анончики а кто то смотрит Женскую суперлигу??? если да то за какие клубы болеете?
+                  .comment__item
+                    .post__data
+                      .post__author Anonymous
+                      .post__date 09/01/25(Mon)14:50:32
+                      .post__id #00012345
+                      .controls
+                        .controls__item.controls__text.gray Ответить
+                    .comment__id >> #00012345
+                    .comment__answer а вообще смотрит кто-то женский футбол?
+              .post
+                .post__header
+                  .post__title NBA 2025-2026 МЕЖСЕЗОНЬЕ - II
+                  .post__controls
+                    .controls
+                      .controls__item.controls__icon
+                        +icon('hide','controls__svg')
+                      .controls__item.controls__icon
+                        +icon('cancel','controls__svg')
+                      .controls__item.controls__text Ответить
+                    .controls
+                      .controls__item.controls__icon
+                        +icon('lock','controls__svg')
+                      .controls__item.controls__icon
+                        +icon('clip','controls__svg')
+                .post__data
+                  .post__author Anonymous
+                  .post__date 09/01/25(Mon)14:50:32
+                  .post__id #00012345
+                .post__pictures
+                  .post__picture
+                    img(src="static/images/img/sports/4.jpg" alt="Картинки")
+                .controls
+                  .controls__item.controls__text.dark Ответить
+                .comment
+                  .comment__item
+                    .post__data
+                      .post__author Anonymous
+                      .post__date 09/01/25(Mon)14:50:32
+                      .post__id #00012345
+                      .controls
+                        .controls__item.controls__text.gray Ответить
+                    .comment__id >> #00012345
+                    .comment__answer Знаю Ирину Григорьеву, Елену Данилову, Елену Морозову, Эльвиру Тодуа
+                  .comment__item
+                    .post__data
+                      .post__author Anonymous
+                      .post__date 09/01/25(Mon)14:50:32
+                      .post__id #00012345
+                      .controls
+                        .controls__item.controls__text.gray Ответить
+                    .comment__id >> #00012345
+                    .comment__answer анончики а кто то смотрит Женскую суперлигу??? если да то за какие клубы болеете?
+              .post
+                .post__header
+                  .post__title ЖФК-женский футбольчик
+                  .post__controls
+                    .controls
+                      .controls__item.controls__icon
+                        +icon('hide','controls__svg')
+                      .controls__item.controls__icon
+                        +icon('cancel','controls__svg')
+                      .controls__item.controls__text Ответить
+                    .controls
+                      .controls__item.controls__icon
+                        +icon('lock','controls__svg')
+                      .controls__item.controls__icon
+                        +icon('clip','controls__svg')
+                .post__data
+                  .post__author Anonymous
+                  .post__date 09/01/25(Mon)14:50:32
+                  .post__id #00012345
+                .post__pictures
+                  .post__picture
+                    img(src="static/images/img/sports/1.jpg" alt="Картинки")
+                  .post__picture
+                    img(src="static/images/img/sports/2.jpg" alt="Картинки")
+                  .post__picture
+                    img(src="static/images/img/sports/3.jpg" alt="Картинки")
+                .controls
+                  .controls__item.controls__text.dark Ответить
+                .comment
+                  .comment__item
+                    .post__data
+                      .post__author Anonymous
+                      .post__date 09/01/25(Mon)14:50:32
+                      .post__id #00012345
+                      .controls
+                        .controls__item.controls__text.gray Ответить
+                    .comment__id >> #00012345
+                    .comment__answer Знаю Ирину Григорьеву, Елену Данилову, Елену Морозову, Эльвиру Тодуа
+                  .comment__item
+                    .post__data
+                      .post__author Anonymous
+                      .post__date 09/01/25(Mon)14:50:32
+                      .post__id #00012345
+                      .controls
+                        .controls__item.controls__text.gray Ответить
+                    .comment__id >> #00012345
+                    .comment__answer анончики а кто то смотрит Женскую суперлигу??? если да то за какие клубы болеете?
+          .pagination
+            a(href="#").pagination__page.active 1
+            a(href="#").pagination__page 2
+            a(href="#").pagination__page 3
+            a(href="#").pagination__page 4
+            a(href="#").pagination__page 5
+            a(href="#").pagination__page ...
+            a(href="#").pagination__page 10
+        .category__col
+          .category__aside
+            aside.aside
+              .aside__title актуальные борды
+              ul.aside__list
+                li.aside__item
+                  a(href="#").aside__single /b/ — /Random/
+                li.aside__item
+                  a(href="#").aside__single /vg/ — /Video Games/
+                li.aside__item
+                  a(href="#").aside__single /a/
+                li.aside__item
+                  a(href="#").aside__single /tv/
+                li.aside__item
+                  a(href="#").aside__single /mu/
+                li.aside__item
+                  a(href="#").aside__single /lit/
+                li.aside__item
+                  a(href="#").aside__single /kpop/ — /K-Pop/
+                li.aside__item
+                  a(href="#").aside__single /gacha/ — /Gacha/
+                li.aside__item
+                  a(href="#").aside__single /ai/
+                li.aside__item
+                  a(href="#").aside__single /pr/
+                li.aside__item
+                  a(href="#").aside__single /tech/
+                li.aside__item
+                  a(href="#").aside__single /s/
+                li.aside__item
+                  a(href="#").aside__single /int/

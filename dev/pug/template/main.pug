@@ -21,12 +21,15 @@ html(lang="ru-RU")
     <!--[if lt IE 9]>
     script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
     <![endif]-->
-  body(class=pageClass)
+  body(class=pageClass data-theme="light")
     .wrapper
       include ../modules/header/header
       main.content#content
         block content
-      include ../modules/footer/footer
+      if (Footer)
+        include ../modules/footer/footer
+        
+    include ../modules/modal/modal
 
     script(src="static/js/libs.min.js")
     script(type="module" src="static/js/main.js")

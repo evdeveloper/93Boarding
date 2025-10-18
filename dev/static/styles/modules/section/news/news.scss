@@ -1,0 +1,47 @@
+.news {
+  $this: &;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    @include media($tablet) { display: flex; }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    height: 260px;
+    background-color: var(--white);
+    transition: all var(--duration);
+    color: var(--gray);
+    &:not(:last-child) { border-right: 1px solid var(--light-gray); }
+    &:hover {
+      background-color: var(--orange);
+      #{$this}__date, 
+      #{$this}__text { color: var(--news-white, var(--white)); }
+      #{$this}__title { color: var(--news-dark, var(--dark)); }
+    }
+    @include media($mobile) { height: auto; }
+  }
+  &__date {
+    font-size: 12px;
+  }
+  &__title {
+    margin-top: auto;
+    font-weight: bold;
+    font-size: 26px;
+    color: var(--dark);
+    line-height: 1;
+    @include media($mobile) {
+      font-size: 20px;
+      margin-top: 30px;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    font-family: var(--helvetica);
+    @include media($mobile) { font-size: 12px; }
+  }
+  &__splide { visibility: visible; }
+}

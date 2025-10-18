@@ -4,24 +4,27 @@
   "description": "Start-template",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp dev",
+    "dev": "gulp",
     "build": "gulp build",
-    "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Evgeny.M.",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/plugin-transform-runtime": "^7.28.3",
+    "@babel/preset-env": "^7.28.3",
     "browser-sync": "^2.26.3",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
     "gulp-cache": "^1.1.1",
     "gulp-cached": "^1.1.1",
     "gulp-changed": "^3.2.0",
     "gulp-cheerio": "^0.6.3",
     "gulp-concat": "^2.6.1",
-    "gulp-csscomb": "^3.0.8",
+    "gulp-csscomb": "^3.1.0",
     "gulp-csso": "^3.0.1",
     "gulp-filter": "^5.1.0",
     "gulp-if": "^2.0.2",
@@ -37,13 +40,16 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^2.1.0",
     "gulp-uglify": "^3.0.1",
+    "gulp-wrap": "^0.15.0",
     "imagemin-jpeg-recompress": "^6.0.0",
     "imagemin-pngquant": "^7.0.0"
   },
   "dependencies": {
+    "@babel/runtime": "^7.28.4",
+    "@fancyapps/ui": "^6.0.34",
+    "@splidejs/splide": "^4.1.4",
     "imask": "^7.1.2",
     "just-validate": "^4.2.0",
-    "normalize-scss": "^7.0.1",
-    "swiper": "^10.0.4"
+    "normalize-scss": "^7.0.1"
   }
 }

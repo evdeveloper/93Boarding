@@ -1,0 +1,76 @@
+.accordion {
+  $this: &;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+    @include media($mobile) { padding: 0 10px; }
+  }
+  &__item {
+    border-bottom: 1px solid var(--light-gray);
+    &.active {
+      #{$this}__toggle {
+        &:before { transform: translate(-50%, -50%) scale(0); }
+        &:after { background-color: var(--orange); }
+      }
+    }
+  }
+  &__top {
+    position: relative;
+    padding: 25px 0;
+    font-size: 26px;
+    cursor: pointer;
+    color: var(--dark);
+    @include media($mobile) { 
+      font-size: 20px;
+      padding: 15px 0;
+    }
+  }
+  &__toggle {
+    @include size(36px);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      background-color: var(--gray);
+    }
+    &:before {
+      width: 1px;
+      height: 100%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform var(--duration);
+    }
+    &:after { 
+      width: 100%;
+      height: 1px;
+      top: 50%;
+      transform: translateY(50%);
+    }
+  }
+  &__body {
+    display: none;
+    font-family: var(--helvetica);
+    color: var(--gray);
+    font-size: 18px;
+    padding-bottom: 16px;
+    p:not(:last-child) { margin-bottom: 16px; }
+    ul {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+      gap: 6px;
+      padding-left: 30px;
+      li { list-style: disc; }
+      @include media($tablet) { padding-left: 20px; }
+    }
+    @include media($tablet) { font-size: 16px; }
+    @include media($mobile) { font-size: 14px; }
+  }
+}

@@ -1,0 +1,22 @@
+.subscribe {
+  &__wrapper {
+    padding: 20px;
+    @include media($mobile) { padding: 10px; }
+  }
+  &__banner {
+    padding: 50px;
+    background-color: var(--orange);
+    @include media($mobile) { padding: 32px 20px; }
+  }
+  &__text {
+    max-width: 880px;
+    margin: 0 auto;
+    font-size: px-to-vw(60);
+    text-align: center;
+    line-height: 1;
+    color: var(--white);
+    span { color: var(--dark); }
+    @include media($tablet) { font-size: 40px; }
+    @include media($mobile) { font-size: 32px; }
+  }
+}

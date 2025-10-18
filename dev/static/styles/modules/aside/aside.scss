@@ -1,0 +1,58 @@
+.aside {
+  $this: &;
+  
+  padding: 60px 20px;
+  background-color: var(--aside-light, var(--light));
+  @include media($mobile) { padding: 14px 10px; }
+  &__title {
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: var(--orange);
+    @include media($mobile) { font-size: 20px; margin-bottom: 10px; }
+  }
+  &__single {
+    color: var(--aside-light-gray, var(--dark));
+    font-size: 26px;
+    transition: color var(--duration);
+    &:hover,
+    &:active,
+    &.active { color: var(--orange); }
+    @include media($mobile) { font-size: 20px; }
+  }
+  &__link {
+    display: grid;
+    grid-template-columns: minmax(0, 46px) minmax(0, 1fr);
+    gap: 20px;
+    color: var(--gray);
+    @include media($mobile) {
+      grid-template-columns: minmax(0, 36px) minmax(0, 1fr);
+      gap: 10px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: var(--helvetica);
+    @include media($mobile) { gap: 5px; }
+  }
+  &__count {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--aside-gray, var(--gray));
+  }
+  &__theme { 
+    color: var(--dark);
+    @include media($mobile) { font-size: 14px; }
+  }
+  &__descr {
+    font-size: 14px;
+    @include line-clamp(2);
+  }
+}

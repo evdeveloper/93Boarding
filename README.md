@@ -26,7 +26,6 @@ npm start
 
 - `npm run dev` - сборка для разработки
 - `npm run build` - сборка для продакшна
-- `npm start` - запуск с watch и live reload
 
 ## Возможности
 

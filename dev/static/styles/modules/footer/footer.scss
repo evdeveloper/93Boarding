@@ -1,1 +1,5 @@
-footer { flex: 0 0 auto; }
+footer { flex: 0 0 auto;}
+.footer {
+  &__wrapper { padding: 40px 20px; }
+  &__title { color: var(--dark); }
+}

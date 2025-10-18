@@ -1,12 +1,33 @@
-extends template/main
+extends template/index
 
 block variables
-  - var title = 'Главная страницаwewewe'
-  - var pageClass = 'index-page'
+  - var title = 'Навигация'
+  - var pageClass = 'nav-page'
 
 
 
 block content
+  style.
+    .nav-page {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      font-size: 24px;
+      padding: 24px;
+      background-color: #d6d6d6;
+    }
+    .nav-page a { color: black; }
+
+  .nav-page
+    a(href="/home.html") Главная
+    a(href="/home2.html") Главная баннер
+    a(href="/board.html") Борд
+    a(href="/faq.html") Часто задаваемые вопросы
+    a(href="/404.html") Ошибка 404
+    a(href="/500.html") Ошибка 500
+    a(href="/502.html") Ошибка 502
+    a(href="/503.html") Ошибка 503
+    a(href="/504.html") Ошибка 504
 
 
 

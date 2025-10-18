@@ -1,4 +1,49 @@
 header.header
+  if (HeaderPicture)
+    .header__picture 
+      img(src="static/images/img/face-light.png" alt="face").light
+      img(src="static/images/img/face-dark.png" alt="face").dark
+  .header__top
+    .container
+      .header__inner
+        .themeToggle
+          .themeToggle__item.themeToggle__light.active
+            +icon('light','themeToggle__icon')
+          .themeToggle__item.themeToggle__dark
+            +icon('dark','themeToggle__icon')
+        a(href="#").header__logo.logo
+          img(src="static/images/img/93.svg" alt="имиджборд")
+          span 
+            | анонимный 
+            br 
+            | имиджборд
+        .header__sandwich.sandwich
+          +icon('sandwich','sandwich__icon')
+  if (HeaderBody)
+    .header__body
+      .container
+        if (pageError)
+          .pageError
+            .pageError__nav #{pageNavigation}
+            .pageError__title 
+              | #{pageTitleLine1}
+              br
+              | #{pageTitleLine2}
+            .pageError__footer 
+              a(href="/").Button.Button_Orange На главную
+              .pageError__descr
+                if (pageDescrLine1)
+                  p #{pageDescrLine1}
+                if (pageDescrLine2)
+                  p #{pageDescrLine2}
+        else
+          .header__title
+            h1 
+              span.gray Анонимный форум 
+              span.orange 93 
+              span.gray — 
+              br
+              | общение без границ и лишних барьеров
 
 
 

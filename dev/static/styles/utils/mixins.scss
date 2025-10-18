@@ -1,8 +1,8 @@
 @mixin size($a, $border: false) {
-  width: #{$a}px;
-  height: #{$a}px;
+  width: #{$a};
+  height: #{$a};
   @if $border {
-    border-radius: #{$border}px;
+    border-radius: #{$border};
   }
 }
 

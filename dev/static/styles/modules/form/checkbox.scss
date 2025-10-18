@@ -1,0 +1,36 @@
+.checkbox {
+  $this: &;
+
+  &__input {
+    &:checked {
+      & + #{$this}__label {
+        #{$this}__icon { transform: translate(-50%, -50%) scale(1); }
+        #{$this}__check { background-color: var(--white-stable); }
+      }
+    }
+  }
+  &__label {
+    position: relative;
+    padding-left: 22px;
+    cursor: pointer;
+    user-select: none;
+  }
+  &__check {
+    position: absolute;
+    @include size(16px);
+    left: 0;
+    top: 0;
+    border: 1px solid var(--gray);
+    position: absolute;
+    background-color: var(--check-bg, var(--white));
+  }
+  &__icon {
+    @include size(80%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    fill: var(--orange);
+    transition: transform var(--duration);
+    transform: translate(-50%, -50%) scale(0);
+  }
+}

@@ -1,18 +1,30 @@
-.button {
+.Button {
   $this: &;
 
   width: 100%;
+  max-width: var(--button-max-width);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: var(--button-font-weight);
+  font-family: var(--helvetica);
   cursor: pointer;
+  font-size: 16px;
+  padding: 0 24px;
   height: var(--button-height);
   text-transform: var(--button-text-transform);
   border: var(--button-border);
+  transition: all var(--duration);
   color: var(--button-color);
   border-radius: var(--button-border-radius);
   background-color: var(--button-background-color);
+  &_Orange {
+    background-color: var(--orange);
+    &:hover,
+    &:active {
+      background-color: var(--orange-hover);
+    }
+  }
   &:disabled {}
   &:active {}
   &:hover {}
