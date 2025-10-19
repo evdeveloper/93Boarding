@@ -24,12 +24,16 @@
     z-index: -1;
     img { display: none; }
     @include media($mobile) {
-      min-width: 200px;
-      top: 80px;
+      min-width: 240px;
+      top: 32px;
       bottom: auto;
-      left: 50%;
+      left: 55%;
       transform: translateX(-50%);
     }
+  }
+  &__container {
+    position: relative;
+    height: 100%;
   }
   &__top {
     height: 88px;
@@ -50,7 +54,7 @@
       &.orange { color: var(--orange); }
     }
     @include media($mobile) {
-      padding: 280px 10px 48px;
+      padding: 352px 10px 48px;
     }
   }
   &__inner {
