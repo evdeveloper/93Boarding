@@ -16,6 +16,19 @@
   border: 1px solid var(--border-dark, var(--light-gray));
   animation-fill-mode: both;
   @include media(481px) { padding: 40px 24px; }
+  &.modal-post {
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 100%;
+    animation-name: fadeInUpRight;
+    @include media($tablet) {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      animation-name: fadeInUp;
+    }
+  }
   &.show {
     display: flex;
     opacity: 1;
@@ -159,8 +172,7 @@
     &__checkbox {
       display: none;
       flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 12px;
+      gap: 12px 40px;
       font-size: 14px;
       margin-top: 12px;
       &.active { display: flex; }
@@ -171,4 +183,8 @@
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translate(-50%, 1000%); }
   100% { opacity: 1; transform: translate(-50%, -50%); }
+}
+@keyframes fadeInUpRight {
+  0% { opacity: 0; transform: translate(-50%, 1000%); }
+  100% { opacity: 1; transform: translate(0, 0); }
 }

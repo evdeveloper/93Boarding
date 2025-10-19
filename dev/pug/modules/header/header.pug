@@ -1,8 +1,4 @@
 header.header
-  if (HeaderPicture)
-    .header__picture 
-      img(src="static/images/img/face-light.png" alt="face").light
-      img(src="static/images/img/face-dark.png" alt="face").dark
   .header__top
     .container
       .header__inner
@@ -22,6 +18,10 @@ header.header
   if (HeaderBody)
     .header__body
       .container
+        if (HeaderPicture)
+          .header__picture 
+            img(src="static/images/img/face-light.png" alt="face").light
+            img(src="static/images/img/face-dark.png" alt="face").dark
         if (pageError)
           .pageError
             .pageError__nav #{pageNavigation}

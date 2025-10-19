@@ -10,6 +10,22 @@
       }
     }
   }
+  &.treds {
+    #{$this}__col {
+      &:first-child {
+        padding: 40px 20px;
+        @include media($mobile) { padding: 30px 10px 10px; }
+      }
+    }
+    .post {
+      padding: 0;
+      background-color: transparent;
+    }
+    .comment { 
+      margin-top: 30px;
+      @include media($mobile) { margin-top: 20px; }
+    }
+  }
   &__inner {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 360px);
@@ -38,10 +54,8 @@
   &__aside {
     position: sticky;
     top: 0;
-    @include media($mobile) { 
-      position: static;
-      border-bottom: 1px solid var(--light-gray);
-    }
+    border-bottom: 1px solid var(--light-gray);
+    @include media($mobile) { position: static; }
   }
 }
 

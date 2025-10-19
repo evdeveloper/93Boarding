@@ -1,5 +1,6 @@
 include ../utils/mixins
 block variables
+- const version = Date.now()
 
 doctype html
 html(lang="ru-RU")
@@ -16,7 +17,7 @@ html(lang="ru-RU")
     link(rel="preconnect" href="https://fonts.googleapis.com")
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
     link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet")
-    link(rel="stylesheet" type='text/css' href="static/css/styles.min.css")
+    link(rel="stylesheet" type='text/css' href=`static/css/styles.min.css?v=${version}`)
 
     <!--[if lt IE 9]>
     script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
@@ -29,7 +30,7 @@ html(lang="ru-RU")
       if (Footer)
         include ../modules/footer/footer
         
-    include ../modules/modal/modal
+    //- include ../modules/modal/modal
 
     script(src="static/js/libs.min.js")
     script(type="module" src="static/js/main.js")

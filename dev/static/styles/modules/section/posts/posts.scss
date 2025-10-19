@@ -1,4 +1,6 @@
 .posts {
+  $this: &;
+
   &__list {
     display: flex;
     flex-direction: column;
@@ -17,7 +19,7 @@
   &__header {
     display: flex;
     gap: 20px;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     @include media($mobile) {
       flex-direction: column-reverse;
       gap: 10px;
@@ -92,13 +94,19 @@
   }
   &__icon {
     width: 20px;
-    padding: 5px;
+    padding: 4px;
     &.active,
     &:hover {
       background-color: var(--orange);
       #{$this}__svg { fill: var(--white-stable); }
     }
-    @include media($mobile) { width: 32px; padding: 8px; }
+    &#{$this}__cancel { padding: 5px; } 
+    @include media($mobile) {
+      width: 32px;
+      padding: 6px;
+      &#{$this}__hide { padding: 6.5px; }
+      &#{$this}__cancel { padding: 8px; }
+    }
   }
   &__svg {
     @include size(100%);
@@ -149,7 +157,10 @@
   gap: 2px;
   font-family: var(--helvetica);
   margin: 20px 0;
-  @include media($mobile) { justify-content: center; }
+  @include media($mobile) { 
+    justify-content: center;
+    margin-top: 50px;
+  }
   &__page {
     display: flex;
     align-items: center;

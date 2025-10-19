@@ -16,15 +16,15 @@
   position: relative;
   z-index: 1;
   &__picture {
-    max-width: px-to-vw(424);
+    max-width: 424px;
     position: absolute;
     bottom: 0;
-    right: px-to-vw(160);
+    right: 90px;
     pointer-events: none;
     z-index: -1;
     img { display: none; }
     @include media($mobile) {
-      max-width: 200px;
+      min-width: 200px;
       top: 80px;
       bottom: auto;
       left: 50%;

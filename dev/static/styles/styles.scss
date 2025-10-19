@@ -116,8 +116,7 @@ body {
       left: 55%;
       transform: translateX(-50%);
       right: auto;
-      @include media($tablet) { 
-        max-width: 45vw;
+      @include media($mobile) { 
         transform: translate(-50%, -50%);
         top: 50%;
       }
@@ -148,7 +147,7 @@ h6 {
 }
 
 h1 { 
-  font-size: px-to-vw(101);
+  font-size: 101px;
   @include media($mobile) { font-size: 40px; }
   @include media($small) { font-size: 32px; }
 

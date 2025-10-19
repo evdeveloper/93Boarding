@@ -1,11 +1,12 @@
 .pageError {
   display: flex;
   flex-direction: column;
-  font-size: px-to-vw(101);
+  font-size: 101px;
   padding: 54px;
   min-height: calc(100dvh - 88px);
   @include media($tablet) { padding: 32px 20px 20px; }
-  @include media($mobile) { min-height: calc(100dvh - 48px); }
+  @include media($mobile) { min-height: calc(100dvh - 48px); font-size: 40px; }
+  @include media($small) { font-size: 32px; }
   &__descr {
     max-width: 360px;
     font-family: var(--helvetica);
